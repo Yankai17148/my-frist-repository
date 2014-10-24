@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/css.css">
+	<script src="./js/jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".function-list>li:last").css("margin-right",0);
+			var aBtn = $(".function-list>li");
+			var aDiv = $(".function-txt");
+			for (var i = 0; i < aBtn.length; i++) {
+				aBtn[i].index = i ;
+				aBtn[i].onclick = function () {
+					for (var i = 0; i < aBtn.length; i++) {
+						aBtn[i].className = "";
+						aDiv[i].style.display = "none";
+					}
+					this.className = "hover";
+					aDiv[this.index].style.display = "block" ;
+				};
+			}
+		});
+	</script>
+</head>
+<body>
+	<div class="banner-main">
+		<div class="container"><img src="./images/banner.jpg" alt=""></div>
+	</div>
+	<div class="about-main">
+		<div class="container"><span>关于骑士【托管服务】想了解更多内容</span><a href="" class="about-main-link">咨询客服</a></div>
+	</div>
+	<div class="why">
+		<div class="container"><img src="./images/why.png" alt=""></div>
+	</div>
+	<div class="function-box">
+		<div class="container">
+			<ul class="function-list">
+				<li class="hover">
+					<img src="./images/icon-2.png" alt=""><br>
+					系统无缝对接
+				</li>
+				<li>
+					<img src="./images/icon-3.png" alt=""><br>
+					快速响应机制
+				</li>
+				<li>
+					<img src="./images/icon-4.png" alt=""><br>
+					强大的保障团队
+				</li>
+				<li>
+					<img src="./images/icon-5.png" alt=""><br>
+					精准的用户定位
+				</li>
+				<li>
+					<img src="./images/icon-6.png" alt=""><br>
+					拥有您的品牌
+				</li>
+				<div class="clear"></div>
+			</ul>
+			<div class="function-txt" style="display:block">
+				<h3 class="function-title">骑士托管平台可以与您的系统完美对接</h3>
+				<p class="function-content">借助骑士人才系统，您可以把您的人才网站托管给我们，无论已开发功能还是原版系统，都能让您更好<br>的投入网站运营，让您的团队如虎添翼。</p>
+			</div>
+			<div class="function-txt">
+				<h3 class="function-title">骑士托管平台为您提供快速响应</h3>
+				<p class="function-content">跟随官方系统升级服务，及时给您的系统注入新的活力和补丁，使您的人才系统运行更完美，操作流程<br>更顺畅，用户体验更丰富。</p>
+			</div>
+			<div class="function-txt">
+				<h3 class="function-title">骑士为您提供强大的后备保障团队</h3>
+				<p class="function-content">我们拥有多年的系统维护经验、专业的技术运营团队、卓越的客服售后团队，在您最需要的时候及时为<br>您的系统提供后备支持，为您的系统保驾护航。</p>
+			</div>
+			<div class="function-txt">
+				<h3 class="function-title">骑士托管平台为您提供精准的用户定位</h3>
+				<p class="function-content">骑士人才系统可为您提供精准、高质量、便于利用的用户群体及相关行业的同类资源信息，定期为您提<br>供网站的数据补充，以提高您企业的活跃度。</p>
+			</div>
+			<div class="function-txt">
+				<h3 class="function-title">一切的一切，最重要的就是要拥有你自己的品牌</h3>
+				<p class="function-content">骑士托管平台除了为您提供系统维护更新的同时，还提供给用户极大的空间，通过不断优化您的人才招<br>聘系统以提升您自身品牌美誉度与知名度。</p>
+			</div>
+		</div>
+	</div>
+	<div class="wecando">
+		<div class="container">
+			<img src="./images/wecando.png" alt="">
+		</div>
+	</div>
+	<div class="price">
+		<div class="container"><img src="./images/price.png" alt=""></div>
+	</div>
+	<div class="friendly-link">
+		<div class="container">
+			<div class="friendly-title">
+				<img src="./images/friendly-title.png" alt="">
+			</div>
+
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			版权所有：太原迅易科技有限公司 榆次分公司地址：山西晋中榆次安宁壹号-711室<br>
+			联系电话：0354-3237474,0354-5507474,0354-3937474,0354-3987474 网站备案：苏ICP备11027010号-1 <br>
+			Copyright©2011 74cms.com All Right Reserved 
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body{margin:0;padding:0;font-size: 12px;color:#666;font-family: "microsoft yahei",Arial, Helvetica, sans-serif;}
+h1,h2,h3,h4,h5{margin:0;padding:0;}
+ul,li{list-style: none;margin:0;padding:0;}
+.clear{clear:both; height:0px; font-size:0px; line-height:0px;}
+img{display: block;border:0;}
+
+.container{width:960px; margin:0 auto;}
+.banner-main{width:100%;background-color: #0086db;}
+.about-main{font-size: 24px;height:79px; background-color: #e8f6fd;text-align: center;padding-top: 50px;}
+.about-main span{margin-right: 200px;}
+.about-main-link{display: inline-block;color:#666;text-decoration: none;padding-left: 30px;background-image: url(../images/plus.gif);background-repeat: no-repeat;background-position: left center;}
+.why{width:100%;background-color: #1a8ddb;padding:15px 0;}
+.function-box{background-color: #86CAEF;width:100%;}
+.function-box ul{margin:0 auto;height:330px;padding-top: 30px;width:930px;overflow: hidden;}
+.function-box ul li{display: block;float: left;width:140px;height:224px; background-color: #0058AD;text-align: center;font-size: 20px;color:#FFF;padding:0px 15px;margin-right: 20px;padding-top: 30px;cursor: pointer;}
+.function-box ul li.hover{background-image: url(../images/icon-1.gif);background-repeat: no-repeat;background-position: center bottom;padding-bottom: 50px;}
+.function-txt{text-align: center;padding-bottom: 30px;display: none;}
+.function-txt .function-title{font-size: 24px;color:#0058ad;}
+.function-txt .function-content{font-size: 18px;color:#FFF;line-height: 180%;}
+.wecando{width:100%;background-color: #fff;}
+.price{background-color: #e0e0ea;width:100%;}
+.friendly-link{}
+.friendly-link .friendly-title{background-color: #fff;padding:30px 0;}
+.footer{width:100%;background-color: #006DAE;padding-top: 40px;padding-bottom: 50px;text-align: center;font-size: 12px;color:#FFF;line-height: 200%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
