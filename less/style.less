@@ -1,0 +1,40 @@
+@link_color : #fff;
+.radius(@radius : 5px ){
+	border-radius: @radius;
+	-webkit-border-radius:@radius;
+}
+.transition( @time: .5s ){
+	-webkit-transition: all @time;
+	-moz-transition: all @time;
+	-ms-transition: all @time;
+	-o-transition: all @time;
+	transition: all @time;
+
+}
+.container{
+	a{
+		display:block;
+		width:100px;
+		height:50px;
+		line-height: 50px;
+		text-decoration: none;
+		margin:0 auto;
+		background: linear-gradient( #E67E22, #D35400 );
+		border-bottom: 3px solid #333;
+		color:@link_color;
+		.radius(6px);
+		.transition(.5s);
+		&:hover{
+			background: linear-gradient( #D35400, #E67E22 );
+		}
+	}
+	.bg{
+		width:100%;
+		height:300px;
+		margin:0 auto;
+		margin-top:20px;
+		background: url(http://placehold.it/1200x300/#27AE60) center center no-repeat;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+}
