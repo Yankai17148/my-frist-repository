@@ -1,0 +1,92 @@
+body{
+/*font-family:Arial,sans-serif;
+font-size:small;*/
+}       
+/*导航条开始*/
+#register{
+float:left;
+width:100%;
+margin:0;
+padding:0;
+list-style:none;
+color:#690;
+background: #BDDB62;
+}
+#register a{
+text-decoration:none;
+color:#360
+}
+#reg{
+float:left;
+margin:0;
+padding:8px 14px;
+}
+#message{
+clear:both;
+font-weight:bold;
+font-size:110%;
+color:#fff;
+text-align:center;
+background:#92B91C;
+}
+#find{
+float:right;
+margin:0;
+padding:8px 14px;
+}
+#message strong{
+text-transform:uppercase;
+
+}
+#message a{
+margin:0 0 0 6px;
+padding:2px 15px;
+text-decoration:none;
+font-weight:norma; 
+color:#fff;
+}
+/*图片列表开始*/
+#sweden{
+float:left;
+width:300px;
+border:2px solid #C8CDD2;
+}
+#sweden dl{
+float:left;
+width:260px;
+margin:10px 20px;
+padding:0;
+display:inline;
+}
+#sweden dt{
+float:right;
+width:160px;
+margin:0;
+padding:0;
+font-size:130%;
+letter-spacing:1px;
+color:#627081;
+}
+#sweden dd{
+margin:0;
+padding:0;
+font-size:85%;
+line-height:1.5em;
+color:#666;
+}
+#sweden dd.img img{
+float:left;
+margin:0 8px 0 0;
+padding:4px;
+border:1px solid #D9E0E6;
+border-bottom-color:#C8CDD2;
+border-right-color:#C8CDD2;
+background:#fff;
+}
+#sweden .alt dt{
+float:left;
+}
+#sweden .alt dd.img img{
+float:right;
+margin:0 0 0 8px;
+}

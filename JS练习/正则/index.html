@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script>
+	window.onload = function() {
+		var oText = document.getElementById( "text1" );
+		var oBtn = document.getElementById( "btn" );
+		//邮箱格式检测
+		oBtn.onclick = function() {
+			var re = /^\w+@[0-9a-z]+\.[a-z]+$/i;			//^代表字符串开始，$代表字符串结尾，\w表示英文数字下划线，+表示可以出现若干次，\.表示检索标点：点， i表示忽略大小写
+			if ( re.test( oText.value ) ) {
+				alert( "It's great!!" );
+			}else{
+				alert( "你丫写错了！" );
+			}
+		}
+	} 
+</script>
+<body>
+	<input type="text" id="text1">
+	<input type="button" id="btn" value="校验">
+	
+</body>
+</html>

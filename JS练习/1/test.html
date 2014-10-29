@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body{
+		font-family: "Microsoft YaHei" , sans-serif , Arial;
+	}
+	h1, p, #linklist{
+		text-align:center;
+	}
+	#container{
+		width:500px;
+		margin:0 auto;
+	}
+	#slideshow{
+		width: 100px;
+		height:100px;
+		margin:0 auto;
+		position: relative;
+		overflow: hidden;
+	}
+	#linklist{
+		list-style:none;
+	}
+	#linklist li{
+		display: inline-block;
+		margin:0 10px;
+	}
+	#linklist li a{
+		display: block;
+		padding:5px;
+		background-color: #ffe900;
+		text-decoration: none;
+		color:#000;
+	}
+	#linklist li a:active{
+		color:#ccc;
+	}
+
+</style>
+<body>
+<div id="container">
+	<h1>Web Desgin</h1>
+	<p>These are the things you should know.</p>
+	<ol id="linklist">
+		<li><a href="">Struture</a></li>
+		<li><a href="">Presentation</a></li>
+		<li><a href="">Behavior</a></li>
+	</ol>
+	<div id="slideshow"><img src="topics.gif" alt="" id="preview"></div>
+</div>
+
+	<script src="moveElement.js"></script>
+</body>
+</html>

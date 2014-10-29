@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script>
+	window.onload = function() {
+		if (window.XMLHttpRequest) {
+			var oAjax = new XMLHttpRequest; 
+		}else {
+			var oAjax = new ActiveXObject( "Microsoft XMLHTTP" );
+		}
+		oAjax.open( "GET", "a.txt", true );
+		oAjax.send();
+		oAjax.onreadystatechange = function() {
+			if (oAjax.readyState == 4) {
+				if(oAjax.status == 200){
+					alert("成功");
+				}else{
+					alert("失败" + oAjax.status);
+				}
+			}
+		}
+	}
+</script>
+<body>
+	
+</body>
+</html>

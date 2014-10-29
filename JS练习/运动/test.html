@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="move3.js"></script>
+</head>
+<style>
+	#div1{
+		width:150px;
+		height:200px;
+		background-color: #eee;
+		position: absolute;
+		left:-150px;
+		top:50px;
+	}
+	#div1 span{
+		color:#fff;
+		font-family: Microsoft YaHei;
+		width:20px;
+		height:70px;
+		background-color: blue;
+		position: absolute;
+		right:-20px;
+		top:50px;
+	}
+</style>
+<script>
+	window.onload = function(){
+		var oDiv = document.getElementById("div1");
+		oDiv.onmouseover = function() {
+			startMove( oDiv, {
+				left : 0
+			});
+		}
+		oDiv.onmouseout = function(){
+			startMove( oDiv, { left: -150 } );
+		}
+		oDiv.addEventListener("click", function(){
+			alert("!!!");
+		}, false)
+	}
+</script>
+<body>
+	<div id="div1">
+		<span>分享到</span>
+	</div>
+</body>
+</html>
