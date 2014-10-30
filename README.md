@@ -15,7 +15,7 @@
   <li><a href="http://www.lofter.com">这是一条LOFTER链接</a></li>
 </ol>
 <h3>表格的测试</h3>
-<table border="0" sellspacing="0" sellpadding="0">
+<table border="0" sellspacing="0" sellpadding="0" width="100%">
   <tbody>
     <tr>
       <th width="50%">标题一</th>
