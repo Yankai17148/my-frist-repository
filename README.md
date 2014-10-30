@@ -22,11 +22,11 @@
       <th width="200">标题二</th>
     </tr>
     <tr>
-      <td>内容一</td>
-      <td>内容二</td>
+      <td align="center">内容一</td>
+      <td align="center">内容二</td>
     </tr>
     <tr>
-      <td colspan="2">一整行的内容</td>
+      <td colspan="2" align="center">一整行的内容</td>
     </tr>
   </tbody>
 </table>
