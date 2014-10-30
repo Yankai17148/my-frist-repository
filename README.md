@@ -18,8 +18,8 @@
 <table border="0" sellspacing="0" sellpadding="0" width="100%">
   <tbody>
     <tr>
-      <th width="50%">标题一</th>
-      <th width="50%">标题二</th>
+      <th width="200">标题一</th>
+      <th width="200">标题二</th>
     </tr>
     <tr>
       <td>内容一</td>
