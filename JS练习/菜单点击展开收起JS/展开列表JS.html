@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{width:300px;border:1px solid #ccc;overflow: hidden;box-sizing:border-box;padding:5px;}
+		.content{width:50%;float: left;border:2px solid #0180CF;padding:15px;box-sizing:border-box;}
+		.select_box{margin:0 auto; margin-top: 20px;width:120px;}
+		.select_but{width:30px;height:30px;background-color: #0180CF;color:#FFF;font-size: 14px;line-height: 30px;border-radius:3px;padding:3px;margin:0 auto;}
+		.select_list{padding:5px;border:1px solid #ccc;border-radius:3px;width:120px;margin-top: 5px;}
+		.select_list div{border-bottom: 1px solid #ccc}
+		.input_box{overflow: hidden;}
+		.input{height:20px;width:300px;float: left;padding:5px 0 5px 5px;border:1px solid #ccc;line-height: 20px;}
+		.input input{border:0;width:280px;outline: none;margin:0;padding:0;font-size: 12px;}
+		.but{float: left;width:80px;height:32px;line-height: 32px;background-color: #0180CF;color:#FFF;text-align: center;font-size: 12px;}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="content">左边百分之五十的盒子</div>
+		<div class="content">右边百分之五十的盒子</div>
+	</div>
+	<div class="select_box">
+		<div class="select_but">菜单</div>
+		<div class="select_list" style="display:none;">
+			<div>选项1</div>
+			<div>选项2</div>
+			<div>选项3</div>
+			<div>选项4</div>
+		</div>
+	</div>
+	<div class="input_box">
+		<div class="input"><input type="text" name="text" id=""></div>
+		<div class="but">搜索</div>
+	</div>
+	
+
+
+
+	<script src="jquery.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".select_but").on("click",function(e){
+				$(".select_list").slideToggle("fast");
+				$(document).one("click",function(){
+					$(".select_list").slideUp();
+				});
+				e.stopPropagation();
+			})
+
+			$(".select_list").on("click",function(e){
+				e.stopPropagation();
+			})
+		});
+	</script>
+</body>
+</html>
