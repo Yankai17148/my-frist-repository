@@ -14,6 +14,22 @@
 		.input{height:20px;width:300px;float: left;padding:5px 0 5px 5px;border:1px solid #ccc;line-height: 20px;}
 		.input input{border:0;width:280px;outline: none;margin:0;padding:0;font-size: 12px;}
 		.but{float: left;width:80px;height:32px;line-height: 32px;background-color: #0180CF;color:#FFF;text-align: center;font-size: 12px;}
+		.search_box{width:100%;height:50px;background-color: #f7f5e7;margin-top: 15px;position: relative;}
+		.search_box span{position: absolute;top:15px;font-size: 14px;color:#666;left:20px;}
+		.search_box .search_input.css{
+			background-color: transparent;background-image: url(search-icon.png);background-repeat: no-repeat;background-position: 5px center;-webkit-background-size: 24px 24px; background-size: 24px 24px;cursor: pointer;border:0;height:37px;margin:3px 0;padding-left: 34px;width:1px;position: absolute;top:5px;right:20px;
+			-webkit-transition: width 400ms ease, background-color 400ms ease;
+			-moz-transition: width 400ms ease, background-color 400ms ease;
+			-ms-transition: width 400ms ease, background-color 400ms ease;
+			-o-transition: width 400ms ease, background-color 400ms ease;
+			transition: width 400ms ease, background-color 400ms ease;
+		}
+		.search_box .search_input.js{
+			background-color: transparent;background-image: url(search-icon.png);background-repeat: no-repeat;background-position: 5px center;-webkit-background-size: 24px 24px; background-size: 24px 24px;cursor: pointer;border:0;height:37px;margin:3px 0;padding-left: 34px;width:1px;position: absolute;top:5px;right:20px;
+		}
+		.search_box .search_input.js:focus{border:2px solid #c3c0ab;cursor: text;outline: none;}
+		.search_box .search_input.css:focus{border:2px solid #c3c0ab;cursor: text;outline: none;background-color: #fff;width:240px;}
+		.animate_text{position: relative;}
 	</style>
 </head>
 <body>
@@ -34,6 +50,14 @@
 		<div class="input"><input type="text" name="text" id=""></div>
 		<div class="but">搜索</div>
 	</div>
+	<div class="search_box">
+		<span>CSS3实现的搜索动画</span>
+		<input type="search" class="search_input css" placeholder="搜索..." title="搜索">
+	</div>
+	<div class="search_box">
+		<span>jQuery实现的搜索动画</span>
+		<input type="search" class="search_input js" placeholder="搜索..." title="搜索">
+	</div>
 	
 
 
@@ -52,6 +76,19 @@
 			$(".select_list").on("click",function(e){
 				e.stopPropagation();
 			})
+			// 搜索框动画效果
+			$(".js").focus(function(){
+				$(this).animate({
+					width: 240,
+					backgroundcolor: "#FFF"},
+					400, "swing");
+			});
+			$(".js").blur(function(){
+				$(this).animate({
+					width: 1,
+					backgroundcolor: "transparent"},
+					400, "swing");
+			});
 		});
 	</script>
 </body>
