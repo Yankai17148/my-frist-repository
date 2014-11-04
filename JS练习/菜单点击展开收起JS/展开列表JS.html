@@ -29,7 +29,8 @@
 		}
 		.search_box .search_input.js:focus{border:2px solid #c3c0ab;cursor: text;outline: none;}
 		.search_box .search_input.css:focus{border:2px solid #c3c0ab;cursor: text;outline: none;background-color: #fff;width:240px;}
-		.animate_text{position: relative;}
+		.comment_box{height:200px;width:150px;background-color: #0180CF;position: relative;margin-top: 15px;left:20px;}
+		.triangle{height:0;border-width:10px;border-style:solid;border-color:transparent transparent #0180CF transparent;position: absolute;top:-20px;left:15px;}
 	</style>
 </head>
 <body>
@@ -57,6 +58,10 @@
 	<div class="search_box">
 		<span>jQuery实现的搜索动画</span>
 		<input type="search" class="search_input js" placeholder="搜索..." title="搜索">
+	</div>
+	<!-- 纯CSS实现的对话框效果 兼容性良好 -->
+	<div class="comment_box">
+		<div class="triangle"></div>
 	</div>
 	
 
