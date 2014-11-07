@@ -19,8 +19,8 @@
 
 	if (@$_POST['submit']) {
 		echo $sql = "INSERT INTO message (id,user,title,content,lastdate) values ('','$_POST[name]','$_POST[title]','$_POST[content]',now())";
-		// mysql_query($sql);
-		// echo "成功";
+		mysql_query($sql);
+		echo "成功";
 	};
  ?>
  <!doctype html>
@@ -34,7 +34,7 @@
  		姓名：<input type="text" name="name"><br>
  		标题：<input type="text" name="title"><br>
  		内容：<textarea name="content" id="" cols="30" rows="10"></textarea><br>
- 		<input type="submit" value="发表留言">
+ 		<input type="submit" value="发表留言" name="submit">
  	</form>
 
  	<table>
