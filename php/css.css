@@ -1,0 +1,181 @@
+/*CSS reset*/
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, table, td, dl, dt, dd,div, img, input{
+	margin:0;
+	padding:0;
+	border:0;
+}
+body{
+	font-family: "Lato","Microsoft Yahei",sans-serif;
+	font-size: 12px;
+	background-color: #22c3aa;
+}
+img{
+	border:none;
+}
+input, textarea, select{
+	outline:none;
+}
+ul, ol{
+	list-style:none;
+}
+a{
+	text-decoration: none;
+}
+textarea{
+	resize:none;
+}
+/*清除浮动*/
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+.clearfix{
+	zoom:1;
+}
+
+/*留言板样式*/
+.message-board{
+	width:700px;
+	margin:0 auto;
+}
+.title{
+	font-size: 4.5em;
+	text-shadow:1px 2px #22c3aa,2px 4px #aee2d9;
+	color:#FFF;
+	text-align: center;
+	margin:40px 0;
+}
+.form-box{
+	padding-left: 40px;
+}
+.input-box{
+	height:40px;
+	width:400px;
+	border-radius: 3px;
+	border:3px solid #F5F5F5;
+	display: inline-block;
+	vertical-align: middle;
+}
+.input-box input{
+	padding:6px 5px 7px 5px;
+	font-size: 20px;
+	width:390px;
+	color:#333;
+	font-family: "Microsoft Yahei";
+	background-color: #ccc;
+	box-shadow: inset 1px 1px 1px 1px #999
+}
+.title-span{
+	display: inline-block;
+	width:100px;
+	text-align: right;
+	font-size: 1.5em;
+	color:#FFF;
+	text-shadow:1px 1px #aee2d9;
+}
+.input-bbox{
+	margin-bottom: 20px;
+	position: relative;
+}
+.area-box{
+	position: relative;
+	width:600px;
+	display: inline-block;
+	border-radius: 3px;
+	border:3px solid #F5F5F5;
+	min-height: 200px;
+}
+.area-box textarea{
+	display: block;
+	border:0;
+	resize:none;
+	min-height: 200px;
+	width:590px;
+	margin:0;
+	padding:6px 5px 7px 5px;
+	font-size: 20px;
+	color:#333;
+	font-family: "Microsoft Yahei";
+	background-color: #ccc;
+	box-shadow: inset 1px 1px 1px 1px #999
+}
+.submit-button{
+	margin-top: 20px;
+	width:200px;
+	height:40px;
+	font-size: 18px;
+	font-family: "Microsoft Yahei";
+	text-align: center;
+	color:#FFF;
+	font-weight: bold;
+	text-shadow:1px 1px #aee2d9;
+	background-color: #008a75;
+	border-bottom: 3px solid #333;
+	cursor: pointer;
+	-webkit-transition: background-color .5s,color .5s;
+	-moz-transition: background-color .5s,color .5s;
+	-ms-transition: background-color .5s,color .5s;
+	-o-transition: background-color .5s,color .5s;
+	transition: background-color .5s,color .5s;
+}
+.submit-button:hover{background-color: #fc3;color:#666;}
+.error{
+	position: absolute;
+	height:30px;
+	line-height: 30px;
+	background-color: #E74C3C;
+	color:#FFF;
+	top:10px;
+	left:520px;
+	padding:0 10px;
+	display: none;
+}
+.error::after{
+	content:"";
+	position: absolute;
+	left:-10px;
+	top:50%;
+	margin-top: -5px;
+	height:0;
+	width:0;
+	border-right:5px solid #E74C3C;
+	border-left:5px solid transparent;
+	border-top:5px solid transparent;
+	border-bottom:5px solid transparent;
+}
+.text-error{
+	position: absolute;
+	height:30px;
+	line-height: 30px;
+	background-color: #E74C3C;
+	color:#FFF;
+	top:300px;
+	left:480px;
+	padding:0 10px;
+	display: none;
+}
+.text-error::after{
+	content:"";
+	position: absolute;
+	left:10px;
+	top:-10px;
+	height:0;
+	width:0;
+	border-right:5px solid transparent;
+	border-left:5px solid transparent;
+	border-top:5px solid transparent;
+	border-bottom:5px solid #E74C3C;
+}
+.content-box{
+	margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+

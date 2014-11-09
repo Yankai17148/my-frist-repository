@@ -30,32 +30,57 @@
  <head>
  	<meta charset="UTF-8">
  	<title>留言板</title>
+ 	<link rel="stylesheet" href="css.css">
+	<script src="jquery.js"></script>
+	<script src="index.js"></script>
  </head>
  <body>
- 	<form action="submit.php" method="post">
- 		姓名：<input type="text" name="name"><br>
- 		标题：<input type="text" name="title"><br>
- 		内容：<textarea name="content" id="" cols="30" rows="10"></textarea><br>
- 		<input type="submit" value="发表留言" name="submit">
- 	</form>
-
- 	<table width=500 border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#add3ef">
-<?php 
-	$sqq = "SELECT*FROM message order by id desc";
-	$query = mysql_query($sqq);
-	while ($row=mysql_fetch_array($query)) {
- ?>
-	  <tr bgcolor="#eff3ff">
-	  <td>标题： <?php echo @$row[title] ?>  用户： <?php echo @$row[user] ?> </td>
-	  <td>时间： <?php echo @$row[lastdate] ?></td>
-	  </tr>
-	  <tr bgColor="#ffffff">
-	  <td colspan="2">内容： <?php echo @$row[content] ?> </td>
-	  </tr>
-  	<?php 
-		}
-	 ?>
-	</table>
-
+ 	<div class="message-board">
+ 		<h1 class="title">Message Board</h1>
+ 		<div class="form-box">
+ 			<form action="submit.php" method="post" id="form-submit">
+ 				<div class="input-bbox" id="name-box">
+ 					<span class="title-span">Name：</span><div class="input-box"><input type="text" name="name" placeholder="Input your name" id="name-input"></div>
+ 					<div class="error">用户名不能为空</div>
+ 				</div>
+		 		<div class="input-bbox" id="title-box">
+		 			<span class="title-span">Title：</span><div class="input-box"><input type="text" name="title" placeholder="Input your title" id="title-input"></div>
+		 			<div class="error">标题不能少于6个字符</div>
+		 		</div>
+		 		<table cellspacing="0">
+		 			<tr>
+		 				<td valign="top" align="right"><span class="title-span">Content：</span></td>
+		 				<td><div class="area-box"><textarea name="content" id="text-input" cols="30" rows="10" placeholder="Input your content"></textarea><div class="text-error">留言内容不能为空</div></div></td>
+		 			</tr>
+		 			<tr>
+		 				<td valign="top" align="right"><span class="title-span">&nbsp;</span></td>
+		 				<td><input type="submit" value="Submit" name="submit" class="submit-button"></td>
+		 			</tr>
+		 		</table>
+		 		
+		 	</form>
+ 		</div>
+ 	</div>
+ 	
+	<div class="message-board content-box">
+		<table width=500 border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#add3ef">
+		<?php 
+			$sqq = "SELECT*FROM message order by id desc";
+			$query = mysql_query($sqq);
+			while ($row=mysql_fetch_array($query)) {
+		 ?>
+			  <tr bgcolor="#eff3ff">
+			  <td>标题： <?php echo @$row[title] ?>  用户： <?php echo @$row[user] ?> </td>
+			  <td>时间： <?php echo @$row[lastdate] ?></td>
+			  </tr>
+			  <tr bgColor="#ffffff">
+			  <td colspan="2">内容： <?php echo @$row[content] ?> </td>
+			  </tr>
+		  	<?php 
+				}
+			 ?>
+		</table>
+	</div>
+ 	
  </body>
  </html>
