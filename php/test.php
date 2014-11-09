@@ -17,11 +17,13 @@
 	// 	echo "已有数据库已经连接";
 	// }
 
-	if (@$_POST['submit']) {
-		echo $sql = "INSERT INTO message (id,user,title,content,lastdate) values ('','$_POST[name]','$_POST[title]','$_POST[content]',now())";
-		mysql_query($sql);
-		echo "成功";
-	};
+	// if (@$_POST['submit']) {
+	// 	$sql = "INSERT INTO message (id,user,title,content,lastdate) values ('','$_POST[name]','$_POST[title]','$_POST[content]',now())";
+	// 	mysql_query($sql);
+	// 	echo "成功";
+	// };
+
+
  ?>
  <!doctype html>
  <html lang="en">
@@ -30,19 +32,30 @@
  	<title>留言板</title>
  </head>
  <body>
- 	<form action="test.php" method="post">
+ 	<form action="submit.php" method="post">
  		姓名：<input type="text" name="name"><br>
  		标题：<input type="text" name="title"><br>
  		内容：<textarea name="content" id="" cols="30" rows="10"></textarea><br>
  		<input type="submit" value="发表留言" name="submit">
  	</form>
 
- 	<table>
- 		<tbody>
- 			<tr>
- 				
- 			</tr>
- 		</tbody>
- 	</table>
+ 	<table width=500 border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#add3ef">
+<?php 
+	$sqq = "SELECT*FROM message order by id desc";
+	$query = mysql_query($sqq);
+	while ($row=mysql_fetch_array($query)) {
+ ?>
+	  <tr bgcolor="#eff3ff">
+	  <td>标题： <?php echo @$row[title] ?>  用户： <?php echo @$row[user] ?> </td>
+	  <td>时间： <?php echo @$row[lastdate] ?></td>
+	  </tr>
+	  <tr bgColor="#ffffff">
+	  <td colspan="2">内容： <?php echo @$row[content] ?> </td>
+	  </tr>
+  	<?php 
+		}
+	 ?>
+	</table>
+
  </body>
  </html>
