@@ -63,18 +63,19 @@
  	</div>
  	
 	<div class="message-board content-box">
-		<table width=500 border="0" align="center" cellpadding="5" cellspacing="1" bgcolor="#add3ef">
+		<h1 class="content-list">Content List</h1>
+		<table width=1000 border="0" align="center"cellspacing="1">
 		<?php 
 			$sqq = "SELECT*FROM message order by id desc";
 			$query = mysql_query($sqq);
 			while ($row=mysql_fetch_array($query)) {
 		 ?>
-			  <tr bgcolor="#eff3ff">
+			  <tr height="58">
 			  <td>标题： <?php echo @$row[title] ?>  用户： <?php echo @$row[user] ?> </td>
-			  <td>时间： <?php echo @$row[lastdate] ?></td>
+			  <td align="right"><?php echo @$row[lastdate] ?></td>
 			  </tr>
-			  <tr bgColor="#ffffff">
-			  <td colspan="2">内容： <?php echo @$row[content] ?> </td>
+			  <tr>
+			  <td colspan="2" class="content-style">内容： <?php echo @$row[content] ?> </td>
 			  </tr>
 		  	<?php 
 				}
