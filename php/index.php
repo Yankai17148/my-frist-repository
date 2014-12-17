@@ -30,9 +30,9 @@
  <head>
  	<meta charset="UTF-8">
  	<title>留言板</title>
- 	<link rel="stylesheet" href="css.css">
-	<script src="jquery.js"></script>
-	<script src="index.js"></script>
+ 	<link rel="stylesheet" href="./css/css.css">
+	<script src="./js/jquery.js"></script>
+	<script src="./js/index.js"></script>
  </head>
  <body>
  	<div class="message-board">
@@ -57,9 +57,9 @@
 		 				<td><input type="submit" value="Submit" name="submit" class="submit-button"></td>
 		 			</tr>
 		 		</table>
-		 		
 		 	</form>
  		</div>
+ 		<a href="reg.php">注册</a>| <a href="login.php">登录</a> | <a href="my.php">用户中心</a>
  	</div>
  	
 	<div class="message-board content-box">

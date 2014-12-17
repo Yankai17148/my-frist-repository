@@ -11,6 +11,4 @@
 		mysql_query($sql);
 		echo "成功<a href='test.php'>返回</a>";
 	};
-
-
  ?>

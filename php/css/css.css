@@ -1,3 +1,7 @@
+@charset "UTF-8";
+@keyframes slideUp {
+	
+}
 /*CSS reset*/
 body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, table, td, dl, dt, dd,div, img, input{
 	margin:0;
@@ -57,6 +61,7 @@ textarea{
 	display: inline-block;
 	vertical-align: middle;
 }
+.input-box.paper{border-color:#008a75;}
 .input-box input{
 	padding:6px 5px 7px 5px;
 	font-size: 20px;
@@ -74,6 +79,7 @@ textarea{
 	color:#FFF;
 	text-shadow:1px 1px #aee2d9;
 }
+.title-span.paper{color:#008a75;}
 .input-bbox{
 	margin-bottom: 20px;
 	position: relative;
@@ -125,6 +131,9 @@ textarea{
 .submit-button:active{
 	top:3px;
 	box-shadow: 0px 0px;
+}
+.submit-button.big{
+	width:406px;
 }
 .error{
 	position: absolute;
@@ -179,7 +188,7 @@ textarea{
 .content-box{
 	width:1000px;
 	padding:40px;
-	background: url(sketch.png);
+	background: url(../images/sketch.png);
 	margin-bottom: 50px;
 	box-shadow: 1px 4px 10px 3px rgb(102,102,102);
 	position: relative;
@@ -197,7 +206,7 @@ textarea{
 	-moz-transform:rotate(5deg);
 	height:150px;
 	width:100%;
-	background: url(sketch.png);
+	background: url(../images/sketch.png);
 	z-index:-2;
 	box-shadow: 1px 4px 10px 3px rgb(102,102,102);
 	-webkit-backface-visibility:hidden;
@@ -213,7 +222,7 @@ textarea{
 	-moz-transform:rotate(-5deg);
 	height:150px;
 	width:100%;
-	background: url(sketch.png);
+	background: url(../images/sketch.png);
 	z-index:-3;
 	box-shadow: 1px 4px 10px 3px rgb(102,102,102);
 	-webkit-backface-visibility:hidden;
@@ -223,7 +232,7 @@ textarea{
 	text-align: center;
 	color:#666;
 	text-shadow:2px 2px #efefef,4px 4px #aee2d9;
-	font-family: "Lota";
+	font-family: "Microsoft Yahei";
 	padding-bottom: 30px;
 	border-bottom: 8px double #22C3AA;
 }
@@ -231,6 +240,9 @@ textarea{
 	border-bottom: 2px dashed #E74C3C;
 	padding-bottom: 20px;
 }
+
+/*注册*/
+.reg-form{margin-top: 20px;padding-left: 200px;}
 
 
 
